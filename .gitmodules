@@ -1,0 +1,4 @@
+[submodule "External/MvsSln"]
+	path = External/MvsSln
+	url = git@github.com:drasticactions/MvsSln.git
+	branch = vs_hack

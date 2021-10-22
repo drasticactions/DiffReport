@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Templates\diff.html.hbs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.9.0-preview1" />
+    <PackageReference Include="Handlebars.Net" Version="2.0.9" />
+	<PackageReference Include="LibGit2Sharp" Version="0.27.0-preview-0119" />
+	<PackageReference Include="Microsoft.Build.Locator" Version="1.4.1" />
+	<PackageReference Include="Spectre.Console" Version="0.42.1-preview.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<AdditionalFiles Include="../stylecop.json" />
+	<EmbeddedResource Include="Templates\diff.html.hbs" />
+    <ProjectReference Include="..\External\MvsSln\MvsSln\MvsSln.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Translations\Common.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Common.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Translations\Common.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Common.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

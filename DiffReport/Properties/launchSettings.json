@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DiffReport": {
+      "commandName": "Project",
+      "commandLineArgs": "--baseSha 4c5cc93be12ee06243f73c6e5151bad4e6c80274 --compareSha 8777be47eaa5dcc16f35be30a6d856efe37428cc --workingDir \"C:\\Users\\t_mil\\source\\repos\\Work\\UITools\""
+    }
+  }
+}
